@@ -1,0 +1,25 @@
+appId: com.digitalclock.electron
+productName: Digital Clock
+compression: maximum
+asar: true
+electronLanguages:
+  - en-US
+files:
+  - main.js
+  - index.html
+  - package.json
+directories:
+  output: dist
+win:
+  target:
+    - nsis
+  signAndEditExecutable: false
+nsis:
+  oneClick: true
+  perMachine: false
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: Digital Clock (Electron)
+  uninstallDisplayName: Digital Clock (Electron)
+  artifactName: DigitalClock-Setup-${version}.exe
+  deleteAppDataOnUninstall: true
